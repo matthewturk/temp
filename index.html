@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+</head>
+
+<div id="viz">
+    <p>Hello!</p>
+</div>
+<script type="text/javascript">
+    var vlSpec = {
+        "data": {
+            "name": "table",
+            "values": [{ "x": 1.0, "y": 2.0 },
+            { "x": 2.0, "y": 1.0 }, 00
+                                              { "x": 3.0, "y": 9.0 },
+            { "x": 4.0, "y": 8.0 },
+            { "x": 5.0, "y": 6.0 }]
+        },
+        "mark": "circle",
+        "encoding": { "x": { "field": "x", "type": "quantitative" }, "y": { "field": "y", "type": "quantitative" } }
+    };
+    var embedded = vegaEmbed("#viz", vlSpec);
+</script>
+
+</html>
